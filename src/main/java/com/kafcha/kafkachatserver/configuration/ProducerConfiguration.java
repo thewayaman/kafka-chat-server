@@ -33,7 +33,7 @@ public class ProducerConfiguration{
 	}
 	
 	@Bean
-	private KafkaTemplate<String, Message> kafkaTemplate(){
+	public KafkaTemplate<String, Message> kafkaTemplate(){
 		return new KafkaTemplate<>(producerFactory());
 	}
 }
