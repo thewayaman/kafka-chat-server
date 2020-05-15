@@ -1,5 +1,6 @@
 package com.kafcha.kafkachatserver.configuration;
 
+import com.kafcha.kafkachatserver.constants.KafkaConstants;
 import com.kafcha.kafkachatserver.model.*;
 
 import java.util.HashMap;
@@ -25,7 +26,7 @@ public class ProducerConfiguration{
 
 	private Map<String,Object> producerConfigurations() {
 		Map<String, Object> configuration = new HashMap<>();
-//		configuration.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,KafkaConstants.Kafka_BROKER);
+		configuration.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,KafkaConstants.KAFKA_BROKER);
 		configuration.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,StringSerializer.class);
 		configuration.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,JsonSerializer.class);
 		return configuration;
